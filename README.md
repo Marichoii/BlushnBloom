@@ -35,7 +35,7 @@ This project explores the intersection of beauty, user experience, and responsiv
 > **Development in progress**  
 Core functionalities are working. Future iterations will include more makeup looks, enhanced UI interactions, and expanded product suggestions.
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**.  
 You are free to use, modify, and distribute it. Attribution to **Marichoii** is appreciated.
