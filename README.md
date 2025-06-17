@@ -1,9 +1,8 @@
-# Blush & Bloom
+# 𐔌 Blush & Bloom
 
 [![Status](https://img.shields.io/badge/status-in%20progress-yellow)]()
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Tech](https://img.shields.io/badge/stack-HTML%2FCSS%2FJS%20%2B%20Bootstrap-orange)]()
-[![Made with 💖](https://img.shields.io/badge/made%20with-%F0%9F%92%96-pink)]()
 [![Built by Marichoii](https://img.shields.io/badge/built%20by-Marichoii-ff69b4)]()
 
 ---
@@ -19,7 +18,6 @@ This project explores the intersection of beauty, user experience, and responsiv
 
 - Occasion-based makeup recommendations  
 - Curated color palettes and suggested products  
-- Responsive interface using Bootstrap 5  
 - Lightweight, clean front-end implementation  
 - Friendly and elegant floral UI concept
 
