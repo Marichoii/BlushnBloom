@@ -2,66 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <meta name="description" content="Blush & Bloom - Occasion-based makeup suggestions and product tips." />
-    <meta name="keywords" content="beauty, skincare, makeup, blush, bloom, cosmetics" />
-    <meta name="author" content="Maria Eduarda de Moura Eguchi" />
+  <meta name="description" content="Blush & Bloom - Occasion-based makeup suggestions and product tips." />
+  <meta name="keywords" content="beauty, skincare, makeup, blush, bloom, cosmetics" />
+  <meta name="author" content="Maria Eduarda de Moura Eguchi" />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="assets/img/logo.png" />
-    <title>Blush & Bloom</title>
+  <link rel="stylesheet" href="assets/css/simulator.css" />
+  <link rel="icon" href="assets/img/logo.png" type="image/png" />
+  <title>Blush & Bloom</title>
 </head>
 
 <body>
-    <header>
-        <h1>Blush & Bloom</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#simulator">Simulator</a></li>
-                <li><a href="index.html">About</a></li>
-                <li><a href="index.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Blush & Bloom</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#simulator">Simulator</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <div id="simulator" class="simulator">
-                <div class="simulator-content">
-                    <h2>Makeup Simulator</h2>
-                    <p>Discover the perfect makeup look for every occasion.</p>
+  <main>
+    <section>
+      <div id="simulator" class="simulator">
+        <div class="simulator-content">
+          <h2>Makeup Simulator</h2>
+          <p>Discover the perfect makeup look for every occasion.</p>
 
-                    <form id="simulatorForm">
-                        <label for="occasion">Select Occasion:</label>
-                        <select id="occasion" name="occasion">
-                            <option value="casual">Casual</option>
-                            <option value="formal">Formal</option>
-                            <option value="party">Party</option>
-                            <option value="wedding">Wedding</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <button type="submit" id="startSimulator">Get Suggestions</button>
-                    </form>
+          <form id="simulatorForm">
+            <label for="colorPalettes">Select Your Seasonal Color Type:</label>
+            <select id="colorPalettes" name="colorPalettes">
+              <option value="spring-warm">Spring Warm</option>
+              <option value="spring-cool">Spring Cool</option>
+              <option value="summer-light">Summer Light</option>
+              <option value="summer-cool">Summer Cool</option>
+              <option value="autumn-warm">Autumn Warm</option>
+              <option value="autumn-deep">Autumn Deep</option>
+              <option value="winter-cool">Winter Cool</option>
+              <option value="winter-deep">Winter Deep</option>
+              <option value="custom">Custom Palette</option>
+            </select>
 
-                    <div id="suggestions" class="suggestions">
-                        <p>Select an occasion to see makeup suggestions.</p>
-                    </div>
-                </div>
-        </section>
+            <label for="skinTone">Select Skin Tone:</label>
+            <select id="skinTone" name="skinTone">
+              <option value="light">Light</option>
+              <option value="medium">Medium</option>
+              <option value="dark">Dark</option>
+              <option value="olive">Olive</option>
+              <option value="other">Other</option>
+            </select>
 
-        <script src="assets/js/simulator.js"></script>
-    </main>
+            <label for="occasion">Select Occasion:</label>
+            <select id="occasion" name="occasion">
+              <option value="casual">Casual</option>
+              <option value="formal">Formal</option>
+              <option value="party">Party</option>
+              <option value="wedding">Wedding</option>
+              <option value="other">Other</option>
+            </select>
 
-    <footer>
-        <p>&copy; 2025 Blush & Bloom. All rights reserved.</p>
-    </footer>
+            <button type="submit" id="startSimulator">Get Suggestions</button>
+          </form>
 
-    <script src="assets/js/main.js"></script>
+          <div id="suggestions" class="suggestions">
+            <p>Select an occasion to see makeup suggestions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blush & Bloom. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/simulator.js"></script>
 </body>
 
 </html>
