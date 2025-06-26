@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SimulatorForm from '../features/simulator/SimulatorForm';
 import SimulatorResult from '../features/simulator/SimulatorResult';
 import SectionTitle from '../components/SectionTitle';
+import SimulationHistory from '../features/simulator/SimulationHistory';
 
 export default function Home() {
     const [result, setResult] = useState(null);
@@ -13,6 +14,7 @@ export default function Home() {
                 <SimulatorForm onResult={setResult} />
                 <div className="mt-8">
                     <SimulatorResult result={result} />
+                    <SimulationHistory />
                 </div>
             </div>
         </main>
