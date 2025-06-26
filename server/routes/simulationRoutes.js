@@ -1,9 +1,6 @@
 import express from 'express';
+import { saveSimulation } from '../controllers/simulationController.js';
 
 const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.send('API is working');
-});
-
+router.post('/simulate', saveSimulation);
 export default router;
