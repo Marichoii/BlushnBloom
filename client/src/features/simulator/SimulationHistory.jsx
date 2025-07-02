@@ -20,27 +20,34 @@ export default function SimulationHistory() {
     }, []);
 
     if (error) {
-        return <div className="text-red-500">Error: {error}</div>;
+        return <div className="text-red-500 text-center mt-4">{error}</div>;
     }
 
     if (!Array.isArray(history)) {
-        return <div className="text-yellow-500">Warning: Data is not an array.</div>;
+        return <div className="text-yellow-500 text-center mt-4">Warning: Data is not an array.</div>;
     }
 
     return (
-        <div className="mt-10">
-            <h2 className="text-2xl font-bold mb-4 text-pink-700 dark:text-pink-300">Simulation History</h2>
-            <ul className="space-y-3">
-                {history.map((sim, idx) => (
-                    <li key={idx} className="p-4 rounded bg-white dark:bg-gray-800 shadow">
-                        <div className="text-sm text-gray-700 dark:text-gray-300">
-                            <strong>Event:</strong> {sim?.form?.event || "?"} |
-                            <strong> Skin:</strong> {sim?.form?.skinTone || "?"} |
-                            <strong> Result:</strong> {sim?.result?.base || "?"}, {sim?.result?.style || "?"}
-                        </div>
-                    </li>
-                ))}
-            </ul>
+        <div className="mt-12 w-full max-w-lg mx-auto">
+            <h2 className="text-2xl md:text-3xl font-fancy text-blush-deep mb-6 text-center">Simulation History</h2>
+            {history.length === 0 ? (
+                <p className="text-center text-gray-600 dark:text-gray-300 text-base">No simulations yet.</p>
+            ) : (
+                <ul className="space-y-4">
+                    {history.map((sim, idx) => (
+                        <li
+                            key={idx}
+                            className="p-5 bg-white rounded-2xl shadow-md border border-blush-accent transition hover:shadow-lg"
+                        >
+                            <div className="text-base text-gray-800 space-y-1 text-center">
+                                <p><strong>Event:</strong> {sim?.form?.event || "?"}</p>
+                                <p><strong>Skin:</strong> {sim?.form?.skinTone || "?"}</p>
+                                <p><strong>Result:</strong> {sim?.result?.base || "?"}, {sim?.result?.style || "?"}</p>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 }

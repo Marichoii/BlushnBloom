@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default function SectionTitle({ text }) {
-    return <h1 className="text-3xl font-extrabold mb-6 text-center text-pink-600 dark:text-pink-400">{text}</h1>;
+  return (
+    <h1 className="text-3xl font-fancy font-semibold text-blush-deep mb-6 text-center tracking-wide">
+      {text}
+    </h1>
+  );
 }

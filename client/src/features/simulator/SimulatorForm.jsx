@@ -31,8 +31,7 @@ export default function SimulatorForm({ onResult }) {
   };
 
   return (
-    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-md w-full max-w-md">
-      <h2 className="text-xl font-fancy font-semibold text-pink-700 mb-4 text-center">Makeup Simulator</h2>
+    <div className="bg-blush-white/80 backdrop-blur p-8 rounded-3xl shadow-lg w-full max-w-md border border-blush-accent">
       <form onSubmit={handleSubmit} className="space-y-4">
         <InputSelect label="Event" name="event" onChange={handleChange} options={["Party", "Interview", "Wedding", "Daily"]} />
         <InputSelect label="Skin Tone" name="skinTone" onChange={handleChange} options={["Light", "Medium", "Dark"]} />
