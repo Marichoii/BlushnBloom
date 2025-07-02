@@ -14,7 +14,7 @@ export default {
         'blush-white': '#fefefe',
       },
       fontFamily: {
-        sans: ['"Helvetica Neue"', 'sans-serif'],
+        sans: ['"Josefin Sans"', 'sans-serif'], 
         fancy: ['"Cormorant Garamond"', 'serif'],
       },
     },

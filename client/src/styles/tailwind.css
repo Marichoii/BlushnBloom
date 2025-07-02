@@ -5,3 +5,7 @@
 body {
   @apply bg-blush-pink text-gray-800 font-sans;
 }
+
+html {
+  scroll-behavior: smooth;
+}
