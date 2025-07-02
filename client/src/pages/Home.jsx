@@ -8,8 +8,8 @@ export default function Home() {
   const [result, setResult] = useState(null);
 
   return (
-    <main className="min-h-screen bg-blush-pink text-gray-900 dark:text-white p-4 md:p-6 flex justify-center items-start">
-      <div className="w-full max-w-lg bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-md">
+    <main className="min-h-screen bg-blush-pink text-gray-800 p-6 flex flex-col items-center">
+      <div className="w-full max-w-lg space-y-8">
         <SectionTitle text="Makeup Simulator" />
         <SimulatorForm onResult={setResult} />
         {result && (

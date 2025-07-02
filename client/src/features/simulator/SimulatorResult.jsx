@@ -5,17 +5,21 @@ export default function SimulatorResult({ result }) {
   if (!result) return null;
 
   return (
-    <div className="p-4 rounded-xl bg-white/70 backdrop-blur shadow text-center">
-      <h2 className="text-lg font-bold text-pink-700 mb-2">Simulation Result</h2>
-      <p className="text-gray-700"><strong>Base:</strong> {result.base}</p>
-      <p className="text-gray-700"><strong>Style:</strong> {result.style}</p>
-      <p className="text-gray-700"><strong>Eyeshadow:</strong> {result.eyeshadow}</p>
-      <p className="text-gray-700"><strong>Lipstick:</strong> {result.lipstick}</p>
-      <div className="flex justify-center gap-2 mt-3">
-        {result.palette.map((color, i) => (
-          <ColorSwatch key={i} colorName={color} />
+    <div className="mt-10 w-full max-w-lg">
+      <h2 className="text-2xl font-fancy text-blush-deep mb-4 text-center">Simulation History</h2>
+      <ul className="space-y-4">
+        {history.map((sim, idx) => (
+          <li
+            key={idx}
+            className="p-5 bg-white rounded-2xl shadow-md border border-blush-accent text-center transition hover:shadow-lg"
+          >
+            <p className="text-gray-800"><strong>Event:</strong> {sim?.form?.event || "?"}</p>
+            <p className="text-gray-800"><strong>Skin:</strong> {sim?.form?.skinTone || "?"}</p>
+            <p className="text-gray-800"><strong>Result:</strong> {sim?.result?.base || "?"}, {sim?.result?.style || "?"}</p>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
+
   );
 }
