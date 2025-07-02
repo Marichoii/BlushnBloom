@@ -31,14 +31,14 @@ export default function SimulatorForm({ onResult }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-6 border border-blush-accent transition hover:shadow-lg">
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="bg-white rounded-xl shadow p-4 border border-blush-accent w-full max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="space-y-2">
         <InputSelect label="Event" name="event" onChange={handleChange} options={["Party", "Interview", "Wedding", "Daily"]} />
         <InputSelect label="Skin Tone" name="skinTone" onChange={handleChange} options={["Light", "Medium", "Dark"]} />
         <InputSelect label="Undertone" name="undertone" onChange={handleChange} options={["Warm", "Cool", "Neutral"]} />
         <InputSelect label="Eye Color" name="eyeColor" onChange={handleChange} options={["Brown", "Green", "Blue", "Black"]} />
         <InputSelect label="Hair Color" name="hairColor" onChange={handleChange} options={["Brunette", "Blonde", "Redhead", "Black"]} />
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-1">
           <Button text="Simulate Makeup" />
         </div>
       </form>

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'blush-pink': '#fff1f5',
+        'blush-pink': '#FFE9EE',
         'blush-accent': '#f8cfd4',
         'blush-deep': '#e39cae',
         'blush-gold': '#d1bfa7',
