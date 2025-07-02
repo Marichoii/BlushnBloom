@@ -1,20 +1,17 @@
-import { MongoClient } from 'mongodb';
+// server/models/db.js
+
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const client = new MongoClient(process.env.MONGO_URI);
-let db;
-
-export async function connectToDB() {
+const connectDB = async () => {
   try {
-    await client.connect();
-    db = client.db('blushnbloom'); 
-    console.log('✅ Connected to MongoDB');
-  } catch (error) {
-    console.error('❌ Failed to connect to MongoDB:', error);
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log('✅ MongoDB connected');
+  } catch (err) {
+    console.error('❌ MongoDB connection error:', err);
+    process.exit(1);
   }
-}
+};
 
-export function getDB() {
-  return db;
-}
+connectDB();
