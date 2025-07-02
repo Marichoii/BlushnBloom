@@ -4,7 +4,6 @@ import Button from '../../components/Button';
 import { getRecommendations } from './simulatorUtils';
 import { saveSimulation } from '../../services/recommendationService';
 
-
 export default function SimulatorForm({ onResult }) {
   const [form, setForm] = useState({
     event: '',
@@ -32,13 +31,18 @@ export default function SimulatorForm({ onResult }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <InputSelect label="Event" name="event" onChange={handleChange} options={["Party", "Interview", "Wedding", "Daily"]} />
-      <InputSelect label="Skin Tone" name="skinTone" onChange={handleChange} options={["Light", "Medium", "Dark"]} />
-      <InputSelect label="Undertone" name="undertone" onChange={handleChange} options={["Warm", "Cool", "Neutral"]} />
-      <InputSelect label="Eye Color" name="eyeColor" onChange={handleChange} options={["Brown", "Green", "Blue", "Black"]} />
-      <InputSelect label="Hair Color" name="hairColor" onChange={handleChange} options={["Brunette", "Blonde", "Redhead", "Black"]} />
-      <Button text="Simulate Makeup" />
-    </form>
+    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-md w-full max-w-md">
+      <h2 className="text-xl font-fancy font-semibold text-pink-700 mb-4 text-center">Makeup Simulator</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <InputSelect label="Event" name="event" onChange={handleChange} options={["Party", "Interview", "Wedding", "Daily"]} />
+        <InputSelect label="Skin Tone" name="skinTone" onChange={handleChange} options={["Light", "Medium", "Dark"]} />
+        <InputSelect label="Undertone" name="undertone" onChange={handleChange} options={["Warm", "Cool", "Neutral"]} />
+        <InputSelect label="Eye Color" name="eyeColor" onChange={handleChange} options={["Brown", "Green", "Blue", "Black"]} />
+        <InputSelect label="Hair Color" name="hairColor" onChange={handleChange} options={["Brunette", "Blonde", "Redhead", "Black"]} />
+        <div className="flex justify-center">
+          <Button text="Simulate Makeup" />
+        </div>
+      </form>
+    </div>
   );
 }

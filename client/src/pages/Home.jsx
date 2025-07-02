@@ -5,18 +5,22 @@ import SectionTitle from '../components/SectionTitle';
 import SimulationHistory from '../features/simulator/SimulationHistory';
 
 export default function Home() {
-    const [result, setResult] = useState(null);
+  const [result, setResult] = useState(null);
 
-    return (
-        <main className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white p-6">
-            <div className="max-w-2xl mx-auto">
-                <SectionTitle text="Makeup Simulator" />
-                <SimulatorForm onResult={setResult} />
-                <div className="mt-8">
-                    <SimulatorResult result={result} />
-                    <SimulationHistory />
-                </div>
-            </div>
-        </main>
-    );
+  return (
+    <main className="min-h-screen bg-blush-pink text-gray-900 dark:text-white p-4 md:p-6 flex justify-center items-start">
+      <div className="w-full max-w-lg bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-md">
+        <SectionTitle text="Makeup Simulator" />
+        <SimulatorForm onResult={setResult} />
+        {result && (
+          <div className="mt-6">
+            <SimulatorResult result={result} />
+          </div>
+        )}
+        <div className="mt-8">
+          <SimulationHistory />
+        </div>
+      </div>
+    </main>
+  );
 }
