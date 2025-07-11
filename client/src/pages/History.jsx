@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import SimulatorForm from '../features/simulator/SimulatorForm';
-import SimulatorResult from '../features/simulator/SimulatorResult';
+import React from 'react';
+import SimulationHistory from '../features/simulator/SimulationHistory';
 
-export default function Home() {
-  const [result, setResult] = useState(null);
-
+export default function History() {
   return (
     <main className="relative min-h-screen bg-blush-pink text-gray-800 p-4 md:p-6 flex flex-col items-center">
       <div
@@ -16,14 +13,16 @@ export default function Home() {
       />
 
       <div className="relative top-5 z-10 w-full max-w-lg flex flex-col items-center">
+        {/* Logo */}
         <img
           src="/src/assets/logo_blushnbloom.svg"
           alt="Blush’n Bloom Logo"
           className="block m-0 w-[75%] max-w-[400px]"
         />
 
+        {/* Nav */}
         <nav className="flex justify-center gap-6 mt-1 mb-4 text-[#444444] font-medium text-sm md:text-base">
-          <a href="/history" className="hover:text-blush-deep transition">HISTORY</a>
+          <a href="/" className="hover:text-blush-deep transition">SIMULATOR</a>
           <a href="#about" className="hover:text-blush-deep transition">ABOUT ME</a>
           <a
             href="https://github.com/Marichoii/BlushnBloom"
@@ -35,20 +34,10 @@ export default function Home() {
           </a>
         </nav>
 
-        <SimulatorForm onResult={setResult} />
-
-        {result && (
-          <div className="mt-4 w-full">
-            <SimulatorResult result={result} />
-          </div>
-        )}
-
-        <section id="about" className="mt-12 text-center px-4">
-          <h2 className="text-2xl font-fancy text-blush-deep mb-4">ABOUT ME</h2>
-          <p className="max-w-md mx-auto text-gray-700 text-base leading-relaxed">
-            Hello! I’m Mari, a computer science student and frontend developer passionate about building elegant and functional web projects. Blush’n Bloom was created to showcase clean UI design and to help makeup enthusiasts plan their styles. Let’s build beautiful things together!
-          </p>
-        </section>
+        {/* History */}
+        <div className="mt-4 w-full">
+          <SimulationHistory />
+        </div>
       </div>
     </main>
   );
