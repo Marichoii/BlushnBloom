@@ -29,7 +29,6 @@ export default function SimulationHistory() {
 
     return (
         <div className="mt-12 w-full max-w-lg mx-auto">
-            <h2 className="text-2xl md:text-3xl font-fancy text-blush-deep mb-6 text-center">Simulation History</h2>
             {history.length === 0 ? (
                 <p className="text-center text-gray-600 dark:text-gray-300 text-base">No simulations yet.</p>
             ) : (
